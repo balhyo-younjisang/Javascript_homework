@@ -1,0 +1,74 @@
+/* Ensure the container is positioned correctly relative to the 3D canvas */
+.container {
+  position: absolute; /* This keeps the UI on top of the canvas */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* This ensures the canvas can still receive mouse events */
+}
+
+.buttons button, .leaveRoom, .title, .players {
+  pointer-events: auto; /* Allows these elements to receive clicks despite the container setting */
+}
+
+/* Ensure the canvas is behind everything */
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* This places the canvas behind other elements */
+}
+
+/* Additional styling remains the same */
+.leaveRoom {
+  background-color: red !important;
+  color: white;
+  padding: 10px;
+}
+
+.leaveRoom:hover {
+  cursor: pointer;
+}
+
+.leaveRoom:active {
+  background-color: rgb(153, 0, 0);
+  color: gainsboro;
+}
+
+.title {
+  font-size: 3rem;
+  color: white;
+  font-family: "Jersey 10";
+  text-align: center;
+}
+
+.players {
+  font-size: 5rem;
+  color: white;
+  font-family: "Jersey 10";
+  text-align: center;
+}
+
+.start {
+  color: white;
+  padding: 10px;
+  font-family: "Jersey 10";
+  font-size: 30px;
+  transition: 0.2s;
+  width: 200px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.buttons button {
+  font-family: "Jersey 10";
+  font-size: 30px;
+  transition: 0.2s;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/init.css" />
+    <link rel="stylesheet" href="./styles/stars.css" />
+    <link rel="stylesheet" href="./styles/room.css" />
+    <link
+      href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/nes.css@latest/css/nes.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/nes.css/css/nes-core.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.socket.io/4.7.5/socket.io.min.js"
+      integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO"
+      crossorigin="anonymous"
+    ></script>
+    <title>Room | Galaxy War</title>
+  </head>
+  <body>
+    <!-- The 3D canvas will render here -->
+    <div id="canvas-container"></div>
+
+    <!-- UI elements container -->
+    <div id="stars"></div>
+    <div class="container">
+      <p class="title">Room</p>
+      <p class="players">0/6</p>
+      <div class="buttons">
+        <button type="button" class="nes-btn is-primary">Setting</button>
+        <button type="button" class="nes-btn is-success start">Start</button>
+        <button type="button" class="nes-btn is-error leaveRoom">
+          Leave Room
+        </button>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" ></script>
+  <script src="./scripts/room.js"></script>
+</html>
